@@ -1,0 +1,6 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 133 95" width="16" height="11">
+  <g id="arrow-left" fill="#c4a67d">
+    <path d="M14.08 43.413L49.806 7.69A4.022 4.022 0 1 0 44.117 2L1.374 44.744A4.02 4.02 0 0 0 .203 47.9a4.009 4.009 0 0 0 1.165 3.114l42.66 42.66a4.033 4.033 0 0 0 5.694-.005 4.028 4.028 0 0 0 .006-5.693L14.233 52.48h113.29a4.533 4.533 0 1 0 0-9.066H14.082z"/>
+  </g>
+</svg>

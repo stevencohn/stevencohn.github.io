@@ -1,0 +1,51 @@
+$(document).ready(function($) {
+
+  // https://jqueryvalidation.org/
+  const day = new Date().getDate();
+  $('#contactForm').validate({
+    rules: {
+      honey: {
+        required: true,
+        digits: true,
+        range: [day, day]
+      }
+    }
+  });
+
+  $('#contactForm').on('change keyup paste', function() {
+    $('#submit').prop('disabled', !$('#contactForm').valid());
+  });
+
+  $('#contactForm').on('submit', function(e) {
+    e.preventDefault();
+
+    // build JSON; no need to be fancy here  since this is for one specific form
+    var data = {};
+    $("#contactForm").serializeArray().map(function(x){ data[x.name] = x.value; });
+
+    //console.log('data',data);
+    //console.log('url', "https://" + window.location.host + "/rest/contact/");
+
+    $.ajax({
+      url: "/prod/rest/contact/",
+      //url: "https://" + window.location.host + "/rest/contact/",
+      type: "POST",
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      data: data,
+      cache: false,
+      success: function (response) {
+        if (response.errorMessage) {
+          this.error(response.errorMessage);
+          return;
+        }
+        // process success message
+        console.log("sent");
+      },
+      error: function (msg) {
+        // process errors
+        console.log("errmsg", msg);
+      }
+    });
+  });
+});
