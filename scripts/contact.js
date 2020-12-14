@@ -45,6 +45,7 @@ $(document).ready(function ($) {
 		$("#contactMessage").val("");
 		$("#honey").val("");
 		$("#honeyp").val("");
+		$("#submit").prop("disabled", true);
 
 		alert("Thank you for your message");
 	});
