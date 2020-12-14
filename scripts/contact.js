@@ -19,7 +19,7 @@ $(document).ready(function($) {
   $('#contactForm').on('submit', function(e) {
     e.preventDefault();
 
-    // build JSON; no need to be fancy here  since this is for one specific form
+    // build JSON; no need to be fancy here since this is for one specific form
     var data = {};
     $("#contactForm").serializeArray().map(function(x){ data[x.name] = x.value; });
 
@@ -41,7 +41,14 @@ $(document).ready(function($) {
           return;
         }
         // process success message
-        console.log("sent");
+		console.log("sent");
+		
+		$("#contactName").val("");
+		$("#contactEmail").val("");
+		$("#contactPhone").val("");
+		$("#contactMessage").val("");
+		$("#honey").val("");
+		$("#honeyp").val("");
       },
       error: function (msg) {
         // process errors
