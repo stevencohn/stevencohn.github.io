@@ -27,11 +27,12 @@ $(document).ready(function($) {
     //console.log('url', "https://" + window.location.host + "/rest/contact/");
 
     $.ajax({
-      url: "/prod/rest/contact/",
+	  url: "https://formspree.io/f/mpzoybae",
+	  //url: "/prod/rest/contact/",
       //url: "https://" + window.location.host + "/rest/contact/",
       type: "POST",
-      contentType: "application/json; charset=utf-8",
-      dataType: "json",
+      //contentType: "application/json; charset=utf-8",
+      //dataType: "json",
       data: data,
       cache: false,
       success: function (response) {
