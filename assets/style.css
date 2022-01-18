@@ -475,9 +475,9 @@ section.intro .box {
 	margin-right:0px;
 	margin-top:130px;
 	position: absolute;
-	float: right;
+	float: left;
 	top: -50px;
-	left: 100px;
+	right: 100px;
 	opacity: 1;
 	z-index:100;
 }
@@ -485,8 +485,8 @@ section.intro .box {
 .cycling .bg {
 	display: block;
 	height: 450px;
-	margin-right: 0px;
-	right: 0px;
+	margin-left: 0px;
+	left: 0px;
 	position: absolute;
 	opacity:0.8;
 }
