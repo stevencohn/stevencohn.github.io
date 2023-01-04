@@ -107,6 +107,19 @@
   transition: 0.3s;
 }
 
+.resume .ref
+{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.resume .ref a
+{
+  font-size: 14px;
+  display: inline;
+  color: var(--dark-highlight);
+}
+
 .resume a:hover, .resume a:focus {
   color: var(--high-color);
 }
